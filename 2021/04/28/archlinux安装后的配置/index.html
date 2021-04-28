@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://tim10100011010.github.io">
-  <title>我经常使用的linux软件(持续更新) | tim1010011010的linux生活</title>
+  <title>archlinux安装后的配置 | tim1010011010的linux生活</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="浏览器firfox：没啥可说的，这么多发行版预装了。chromium：开源版google浏览器。google-chrome：Google大的浏览器，插件众多，用户量庞大，很多多浏览器内核使用chrome内核。microsoft-edge-dev-bin：微软推出的浏览器，国内使用起来比较方便，同步十分舒服。 生产力libreoffice：著名开源office软件。wps-office：金山旗下的办">
+  <meta name="description" content="添加用户使用root用户不安全，添加一个普通用户是很有必要的useradd -m -G wheel -s &#x2F;bin&#x2F;bash  用户名设置密码passwd 用户名编辑&#x2F;etc&#x2F;sudoers 1#%wheel ALL&#x3D;(ALL) ALL  去掉前面的# 1%wheel ALL&#x3D;(ALL) ALL  退出。 图形界面安装xorg包组sudo pacman -S xorg 安装驱动">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我经常使用的linux软件(持续更新)">
-<meta property="og:url" content="http://tim10100011010.github.io/2021/04/28/%E6%88%91%E7%BB%8F%E5%B8%B8%E4%BD%BF%E7%94%A8%E7%9A%84linux%E8%BD%AF%E4%BB%B6-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/index.html">
+<meta property="og:title" content="archlinux安装后的配置">
+<meta property="og:url" content="http://tim10100011010.github.io/2021/04/28/archlinux%E5%AE%89%E8%A3%85%E5%90%8E%E7%9A%84%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="tim1010011010的linux生活">
-<meta property="og:description" content="浏览器firfox：没啥可说的，这么多发行版预装了。chromium：开源版google浏览器。google-chrome：Google大的浏览器，插件众多，用户量庞大，很多多浏览器内核使用chrome内核。microsoft-edge-dev-bin：微软推出的浏览器，国内使用起来比较方便，同步十分舒服。 生产力libreoffice：著名开源office软件。wps-office：金山旗下的办">
+<meta property="og:description" content="添加用户使用root用户不安全，添加一个普通用户是很有必要的useradd -m -G wheel -s &#x2F;bin&#x2F;bash  用户名设置密码passwd 用户名编辑&#x2F;etc&#x2F;sudoers 1#%wheel ALL&#x3D;(ALL) ALL  去掉前面的# 1%wheel ALL&#x3D;(ALL) ALL  退出。 图形界面安装xorg包组sudo pacman -S xorg 安装驱动">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-04-28T06:56:53.000Z">
-<meta property="article:modified_time" content="2021-04-28T06:58:15.239Z">
+<meta property="article:published_time" content="2021-04-28T08:25:41.000Z">
+<meta property="article:modified_time" content="2021-04-28T08:27:03.199Z">
 <meta property="article:author" content="tim1010011010">
 <meta name="twitter:card" content="summary">
   
@@ -148,37 +148,62 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-我经常使用的linux软件-持续更新" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-archlinux安装后的配置" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      我经常使用的linux软件(持续更新)
+      archlinux安装后的配置
     </h1>
   
 
         
-        <a href="/2021/04/28/%E6%88%91%E7%BB%8F%E5%B8%B8%E4%BD%BF%E7%94%A8%E7%9A%84linux%E8%BD%AF%E4%BB%B6-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/" class="archive-article-date">
-  	<time datetime="2021-04-28T06:56:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-28</time>
+        <a href="/2021/04/28/archlinux%E5%AE%89%E8%A3%85%E5%90%8E%E7%9A%84%E9%85%8D%E7%BD%AE/" class="archive-article-date">
+  	<time datetime="2021-04-28T08:25:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h2><p>firfox：没啥可说的，这么多发行版预装了。<br>chromium：开源版google浏览器。<br>google-chrome：Google大的浏览器，插件众多，用户量庞大，很多多浏览器内核使用chrome内核。<br>microsoft-edge-dev-bin：微软推出的浏览器，国内使用起来比较方便，同步十分舒服。</p>
-<h2 id="生产力"><a href="#生产力" class="headerlink" title="生产力"></a>生产力</h2><p>libreoffice：著名开源office软件。<br>wps-office：金山旗下的办公软件，对Linux友好，同步方便<br>yozo-ofiice：永中软件的office产品。<br>freeoffice：一家国外的开发团队开发的office，旨在替代微软的office。<br>google office（web）：优秀的weboffice，缺点是404<br>Microsoft Office（web）：可以和office365同步。<br>typora：简洁好用的markdown编辑器。<br>davinci-resolve：专业的剪辑、调色、特效和音频后期制作</p>
-<h2 id="中文输入法"><a href="#中文输入法" class="headerlink" title="中文输入法"></a>中文输入法</h2><p>fictix-rime：rime输入法的fcitx版本<br>fcitx-libpinyin：优秀的linux输入法<br>fictx-googlepin：Google 拼音输入法 for Android<br>ibus-rime：rime输入法的ibus版本<br>ibus-chewing：一个智能中文语音输入法引擎<br>fcitx5-chinese-addons：fcitx5小企鹅，配合字库会有意想不到的效果<br>fictx5-pinyin-sougou：使用fcitx5的搜狗输入法。<br>fcitx5-pinyin-zhwiki（archlinux）：肥猫大佬根据中文维基百科制作的词库</p>
-<h2 id="影音"><a href="#影音" class="headerlink" title="影音"></a>影音</h2><p>vlc：一款功能全面的播放器。<br>netease-cloud-music：网易云音乐，原生支持linux。<br>qqmusic：腾讯推出的音乐软件，bug有些多。<br>ffmpeg：一个很方便的转格式的软件。</p>
-<h2 id="虚拟机"><a href="#虚拟机" class="headerlink" title="虚拟机"></a>虚拟机</h2><p>qemu：原生的虚拟机，性能也很强劲<br>vmware：全平台的虚拟机<br>virtualbox：比vmware轻量</p>
-<h2 id="wine"><a href="#wine" class="headerlink" title="wine"></a>wine</h2><p>wine-wechat（arch）：一款wine微信<br>deepin.com.wechat：deepin-wine下的微信<br>deepin.com.qq.im：deepin-wine下的qq<br>deepin.com.qq.office：deepin-wine下的tim<br>deepin.com.dingtalk.com：deepin-wine下的钉钉<br>com.qq.tim.spark：星火商店的tim，比deepin.com.qq.office版本新<br>com.qq.wechat.spark：星火商店的微信<br>com.tencent.meeting.deepin：deepin-wine下的腾讯会议<br>wine-for-wechat：解决wine运行微信等软件最小化出现透明框。</p>
-<h2 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h2><p>steam：理财工具<br>hmcl：优秀的minecraft启动器<br>lutris：Linux下超强的游戏平台</p>
-<h2 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h2><p>vscode：微软推出的软件，十分方便<br>jetbrains家族软件：支持Linux，用户众多。</p>
-<h2 id="下载工具"><a href="#下载工具" class="headerlink" title="下载工具"></a>下载工具</h2><p>aria2：速度快<br>uget：linux版迅雷<br>fdm：多线程下载工具<br>kget：kde推出的下载器</p>
-<h2 id="通讯软件"><a href="#通讯软件" class="headerlink" title="通讯软件"></a>通讯软件</h2><p>mitalk：米聊<br>telegram-desktop-git：电报<br>zoom：视频会议软件（网课用）<br>zhumu：可能是一个抄袭zoom的软件（网课用）</p>
-<h2 id="实用小工具"><a href="#实用小工具" class="headerlink" title="实用小工具"></a>实用小工具</h2><p>susestudioimagewriter：suse推出的软件，写入镜像很方便<br>filelight:可以方便的看磁盘空间分布<br>flameshot：火焰截图，功能齐全的截图<br>obs-studio：专业录屏和直播推流<br>deepin-screenshot：deepin推出的截屏和录屏软件<br>kde- connect：手机电脑协作</p>
+        <h2 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a>添加用户</h2><p>使用root用户不安全，添加一个普通用户是很有必要的<br><code>useradd -m -G wheel -s /bin/bash  用户名</code><br>设置密码<br><code>passwd 用户名</code><br>编辑/etc/sudoers</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#%wheel ALL&#x3D;(ALL) ALL</span><br></pre></td></tr></table></figure>
+
+<p>去掉前面的#</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%wheel ALL&#x3D;(ALL) ALL</span><br></pre></td></tr></table></figure>
+
+<p>退出。</p>
+<h2 id="图形界面"><a href="#图形界面" class="headerlink" title="图形界面"></a>图形界面</h2><h3 id="安装xorg包组"><a href="#安装xorg包组" class="headerlink" title="安装xorg包组"></a>安装<code>xorg</code>包组</h3><p><code>sudo pacman -S xorg</code></p>
+<h3 id="安装驱动"><a href="#安装驱动" class="headerlink" title="安装驱动"></a>安装驱动</h3><h4 id="显卡驱动"><a href="#显卡驱动" class="headerlink" title="显卡驱动"></a>显卡驱动</h4><p>intel：<code>sudo pacman -S xf86-video-intel</code><br>amd：<code>sudo pacman -S xf86-video-amdgpu</code><br>ati：<code>sudo pacman -S xf86-video-ati</code><br>nvidia：<code>sudo pacman -S nvida #闭源驱动，怕显卡更新崩安装nvidia-dkms</code><br>nvidia（nouveau）：<code>sudo pacman -S xf86-video-nouveau #nvidia开源驱动</code></p>
+<h4 id="触控板驱动"><a href="#触控板驱动" class="headerlink" title="触控板驱动"></a>触控板驱动</h4><p><code>sudo pacman -S xf86-input-libinput</code></p>
+<h3 id="安装桌面环境及显示管理器"><a href="#安装桌面环境及显示管理器" class="headerlink" title="安装桌面环境及显示管理器"></a>安装桌面环境及显示管理器</h3><h4 id="安装gnome桌面环境及gdm"><a href="#安装gnome桌面环境及gdm" class="headerlink" title="安装gnome桌面环境及gdm"></a>安装gnome桌面环境及gdm</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S gnome</span><br><span class="line">systemctl enable gdm</span><br><span class="line">systemctl start gdm</span><br></pre></td></tr></table></figure>
+
+<h4 id="安装kde及sddm"><a href="#安装kde及sddm" class="headerlink" title="安装kde及sddm"></a>安装kde及sddm</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S plasma sddm</span><br><span class="line">systemctl enable sddm</span><br><span class="line">systemctl start sddm</span><br></pre></td></tr></table></figure>
+
+<h4 id="安装lxde及lxdm"><a href="#安装lxde及lxdm" class="headerlink" title="安装lxde及lxdm"></a>安装lxde及lxdm</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S lxde</span><br><span class="line">systemctl enable lxdm</span><br><span class="line">systemctl start lxdm</span><br></pre></td></tr></table></figure>
+
+<h4 id="安装xfce及lightdm"><a href="#安装xfce及lightdm" class="headerlink" title="安装xfce及lightdm"></a>安装xfce及lightdm</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S xfce4 lightdm lightdm-gtk-greeter</span><br><span class="line">systemctl enable lightdm</span><br><span class="line">systemctl start lightdm</span><br></pre></td></tr></table></figure>
+
+<h4 id="安装dde及lightdm"><a href="#安装dde及lightdm" class="headerlink" title="安装dde及lightdm"></a>安装dde及lightdm</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S deepin deepin-extra lightdm lightdm-gtk-greeter</span><br></pre></td></tr></table></figure>
+
+<p>编辑<code>/etc/lightdm/lightdm.conf</code><br>找到<code>greeter-session</code><br>将lightdm主题改为deepin主题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">greeter-session&#x3D;lightdm-deepin-greeter</span><br></pre></td></tr></table></figure>
+
+<h2 id="将系统语言改为中文"><a href="#将系统语言改为中文" class="headerlink" title="将系统语言改为中文"></a>将系统语言改为中文</h2><h3 id="安装字体"><a href="#安装字体" class="headerlink" title="安装字体"></a>安装字体</h3><p>我比较偏爱文泉驿<br><code>sudo pacman -S wyq-microhei wqy-microhei-lite wqy-bitmapfont wqy-zenhei</code><br>gnome和kde可以在系统设置中设置语言</p>
+<h4 id="全局中文（可能会tty乱码）"><a href="#全局中文（可能会tty乱码）" class="headerlink" title="全局中文（可能会tty乱码）"></a>全局中文（可能会tty乱码）</h4><p>编辑<code>/etc/locale.conf</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LANG&#x3D;zh_CN.UTF-8</span><br></pre></td></tr></table></figure>
+
+<p>编辑<code>~/.xprofile</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export LANG&#x3D;zh_CN.UTF-8</span><br><span class="line">export LANGUAGE&#x3D;zh_CN:en_US</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加archlinuxcn源并安装aur助手"><a href="#添加archlinuxcn源并安装aur助手" class="headerlink" title="添加archlinuxcn源并安装aur助手"></a>添加archlinuxcn源并安装aur助手</h2><p>我使用压力相对小的北外源<br>编辑<code>/etc/pacman.conf</code>，在最底部添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[archlinuxcn]</span><br><span class="line">Server &#x3D; https:&#x2F;&#x2F;mirrors.bfsu.edu.cn&#x2F;archlinuxcn&#x2F;$arch</span><br></pre></td></tr></table></figure>
+
+<p>安装<code>archlinuxcn-keyring</code>包导入 GPG key。<br><code>sudo pacman -S archlinuxcn-keyring</code><br>更新源<code>sudo pacman -Syyu</code><br>安装aur助手<code>yay</code><br><code>sudo pacman -S yay</code></p>
+<hr>
+<p> <strong>现在，你有了一个可以正常日常使用的archLinux，尽情享受吧！</strong></p>
 
       
 
@@ -258,7 +283,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://tim10100011010.github.io/2021/04/28/%E6%88%91%E7%BB%8F%E5%B8%B8%E4%BD%BF%E7%94%A8%E7%9A%84linux%E8%BD%AF%E4%BB%B6-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://tim10100011010.github.io/2021/04/28/archlinux%E5%AE%89%E8%A3%85%E5%90%8E%E7%9A%84%E9%85%8D%E7%BD%AE/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -272,18 +297,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/04/28/archlinux%E5%AE%89%E8%A3%85%E5%90%8E%E7%9A%84%E9%85%8D%E7%BD%AE/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          archlinux安装后的配置
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/04/28/archlinux%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B-%E8%B7%9F%E9%A3%8E%E6%96%87%E7%AB%A0/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">archlinux安装教程(跟风文章)</div>
+    <a href="/2021/04/28/%E6%88%91%E7%BB%8F%E5%B8%B8%E4%BD%BF%E7%94%A8%E7%9A%84linux%E8%BD%AF%E4%BB%B6-%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我经常使用的linux软件(持续更新)</div>
       <i class="icon-circle-right"></i>
     </a>
   
