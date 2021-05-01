@@ -148,6 +148,255 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-我喜欢的项目合集" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/05/01/%E6%88%91%E5%96%9C%E6%AC%A2%E7%9A%84%E9%A1%B9%E7%9B%AE%E5%90%88%E9%9B%86/">我喜欢的项目合集</a>
+    </h1>
+  
+
+        
+        <a href="/2021/05/01/%E6%88%91%E5%96%9C%E6%AC%A2%E7%9A%84%E9%A1%B9%E7%9B%AE%E5%90%88%E9%9B%86/" class="archive-article-date">
+  	<time datetime="2021-05-01T06:12:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a target="_blank" rel="noopener" href="https://dwm.suckless.org/">dwm</a>：优秀的动态窗口管理器。<br><a target="_blank" rel="noopener" href="https://code.videolan.org/videolan/vlmc">vlmc</a>：vediolan推出的剪辑软件。<br><a target="_blank" rel="noopener" href="https://st.suckless.org/">st</a>：简洁快速的终端。<br><a target="_blank" rel="noopener" href="https://github.com/xanmod/linux">linux-xanmod</a>：一个优秀的内核。<br><a target="_blank" rel="noopener" href="https://gitlab.com/anarchyinstaller/installer">anarchylinux</a>:一个基于archlinux的发行版（安装脚本）<br><a target="_blank" rel="noopener" href="https://rockylinux.org/">rocky linux</a>：可能是centos较好的替代品。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">杂谈</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/05/01/%E6%88%91%E5%96%9C%E6%AC%A2%E7%9A%84%E9%A1%B9%E7%9B%AE%E5%90%88%E9%9B%86/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-通过samba搭建NAS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/05/01/%E9%80%9A%E8%BF%87samba%E6%90%AD%E5%BB%BANAS/">通过samba搭建NAS</a>
+    </h1>
+  
+
+        
+        <a href="/2021/05/01/%E9%80%9A%E8%BF%87samba%E6%90%AD%E5%BB%BANAS/" class="archive-article-date">
+  	<time datetime="2021-05-01T06:09:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>弄了个小板子，准备通过samba来搭nas，本次环境为debian</p>
+<h2 id="一-安装samba和ntfs-3g"><a href="#一-安装samba和ntfs-3g" class="headerlink" title="一 安装samba和ntfs-3g"></a>一 安装samba和ntfs-3g</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install samba samba-common-bin ntfs-3g</span><br></pre></td></tr></table></figure>
+
+<h2 id="二-配置"><a href="#二-配置" class="headerlink" title="二 配置"></a>二 配置</h2><p>编辑<code>/etc/smb.conf</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[nas]</span><br><span class="line">	valid users &#x3D; 用户名 root</span><br><span class="line">	path &#x3D; &#x2F;media&#x2F;用户名</span><br><span class="line">	browseable &#x3D; yes</span><br><span class="line">	writable &#x3D; yes</span><br><span class="line">	create mask &#x3D; 0644</span><br><span class="line">	directory &#x3D; 0775</span><br></pre></td></tr></table></figure>
+
+<p>添加用户</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo smbpasswd -a 用户名</span><br></pre></td></tr></table></figure>
+
+<h2 id="三-启动服务"><a href="#三-启动服务" class="headerlink" title="三 启动服务"></a>三 启动服务</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable smbd &amp;&amp; systemctl start smbd</span><br></pre></td></tr></table></figure>
+
+<p>外接硬盘，然后，在设备上连接ip地址，输入用户名和密码就可以访问了。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">NAS</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">家用服务器</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/05/01/%E9%80%9A%E8%BF%87samba%E6%90%AD%E5%BB%BANAS/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-archlinux下安装virtualbox" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/05/01/archlinux%E4%B8%8B%E5%AE%89%E8%A3%85virtualbox/">archlinux下安装virtualbox</a>
+    </h1>
+  
+
+        
+        <a href="/2021/05/01/archlinux%E4%B8%8B%E5%AE%89%E8%A3%85virtualbox/" class="archive-article-date">
+  	<time datetime="2021-05-01T06:06:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>安装<code>virtualbox</code>包以及模块<code>virtualbox-modules-arch</code>如果是lts及其他内核，则安装<code>virtualbox-modules-dkms</code>。增强功能和扩展包也可以选择安装。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S virtualbox virtualbox-modules-arch virtualbox-guest-iso</span><br><span class="line">yay -S virtalbox-ext-oracle</span><br></pre></td></tr></table></figure>
+
+<h2 id="加载模块"><a href="#加载模块" class="headerlink" title="加载模块"></a>加载模块</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">modprobe vboxdrv</span><br><span class="line">modprobe vboxnetadp</span><br><span class="line">modprobe vboxnetflt</span><br><span class="line">modprobe vboxpci</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a>添加用户</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useradd -G vboxusers 用户名</span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">日常使用</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">虚拟机</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/05/01/archlinux%E4%B8%8B%E5%AE%89%E8%A3%85virtualbox/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-archlinux下kvm安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -408,6 +657,10 @@
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">软件</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">杂谈</a>
         		</li>
       		
 		</ul>
@@ -759,6 +1012,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">软件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">杂谈</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">NAS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">家用服务器</a>
               </li>
             
             <div class="clearfix"></div>
