@@ -16,7 +16,7 @@
 <meta property="og:description" content="添加用户使用root用户不安全，添加一个普通用户是很有必要的useradd -m -G wheel -s &#x2F;bin&#x2F;bash  用户名设置密码passwd 用户名编辑&#x2F;etc&#x2F;sudoers 1#%wheel ALL&#x3D;(ALL) ALL  去掉前面的# 1%wheel ALL&#x3D;(ALL) ALL  退出。 图形界面安装xorg包组sudo pacman -S xorg 安装驱动">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-04-28T08:25:41.000Z">
-<meta property="article:modified_time" content="2021-04-29T11:02:13.550Z">
+<meta property="article:modified_time" content="2021-05-03T14:08:27.760Z">
 <meta property="article:author" content="tim1010011010">
 <meta property="article:tag" content="日常使用">
 <meta property="article:tag" content="archlinux">
@@ -197,7 +197,7 @@
 <p>编辑<code>/etc/lightdm/lightdm.conf</code><br>找到<code>greeter-session</code><br>将lightdm主题改为deepin主题</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">greeter-session&#x3D;lightdm-deepin-greeter</span><br></pre></td></tr></table></figure>
 
-<h2 id="将系统语言改为中文"><a href="#将系统语言改为中文" class="headerlink" title="将系统语言改为中文"></a>将系统语言改为中文</h2><h3 id="安装字体"><a href="#安装字体" class="headerlink" title="安装字体"></a>安装字体</h3><p>我比较偏爱文泉驿<br><code>sudo pacman -S wyq-microhei wqy-microhei-lite wqy-bitmapfont wqy-zenhei</code><br>gnome和kde可以在系统设置中设置语言</p>
+<h2 id="将系统语言改为中文"><a href="#将系统语言改为中文" class="headerlink" title="将系统语言改为中文"></a>将系统语言改为中文</h2><h3 id="安装字体"><a href="#安装字体" class="headerlink" title="安装字体"></a>安装字体</h3><p>我比较偏爱文泉驿<br><code>sudo pacman -S wqy-microhei wqy-microhei-lite wqy-bitmapfont wqy-zenhei</code><br>gnome和kde可以在系统设置中设置语言</p>
 <h4 id="全局中文（可能会tty乱码）"><a href="#全局中文（可能会tty乱码）" class="headerlink" title="全局中文（可能会tty乱码）"></a>全局中文（可能会tty乱码）</h4><p>编辑<code>/etc/locale.conf</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LANG&#x3D;zh_CN.UTF-8</span><br></pre></td></tr></table></figure>
 
