@@ -181,8 +181,10 @@
 <p>UEFI 旨在消除对中间引导加载程序的需求，所以，如果你的主板和内核支持UEFI，想要获得流畅单系统引导体验，受够了grub的小毛病不断，那么，EFISTUB值得一试。</p>
 <h2 id="直接使用UEFI引导"><a href="#直接使用UEFI引导" class="headerlink" title="直接使用UEFI引导"></a>直接使用UEFI引导</h2><h3 id="1-将内核镜像放到esp-EFI-xxx下"><a href="#1-将内核镜像放到esp-EFI-xxx下" class="headerlink" title="1 将内核镜像放到esp\EFI\xxx下"></a>1 将内核镜像放到<code>esp\EFI\xxx</code>下</h3><p>我们要使用EFISTUB引导内核镜像，我们需要把内核镜像放到efi分区内供固件读取，然后才可以引导。</p>
 <p>我们可以直接把vmlinuz拷贝到esp\EFI\xxx下，但是一旦内核进行了更新，我们就需要重新复制vmlinuz，而且一旦忘了复制，很容易导致启动失败。面对这种情况，我们有很多方法来解决这个麻烦的问题。</p>
-<h4 id="直接将esp挂载到-boot"><a href="#直接将esp挂载到-boot" class="headerlink" title="直接将esp挂载到/boot"></a>直接将esp挂载到/boot</h4><p>archlinux安装时，wiki上有讲将esp挂载到/boot，这种挂载方式可以让<code>efibootmgr</code>直接将vmlinuz创建成一个启动项供固件直接引导。</p>
-<h4 id="Debian下使用postinst-d脚本"><a href="#Debian下使用postinst-d脚本" class="headerlink" title="Debian下使用postinst.d脚本"></a>Debian下使用postinst.d脚本</h4><p>Debian官方wiki也提供了一种方式：<br>/etc/kernel/postinst.d/zz-update-efistub 中放置一个脚本：</p>
+<p><em>直接将esp挂载到/boot</em></p>
+<p>archlinux安装时，wiki上有讲将esp挂载到/boot，这种挂载方式可以让<code>efibootmgr</code>直接将vmlinuz创建成一个启动项供固件直接引导。</p>
+<p><em>Debian下使用postinst.d脚本</em> </p>
+<p>Debian官方wiki也提供了一种方式：<br>/etc/kernel/postinst.d/zz-update-efistub 中放置一个脚本：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#!&#x2F;bin&#x2F;sh </span><br><span class="line">cp &#x2F;vmlinuz &#x2F;boot&#x2F;efi&#x2F;EFI&#x2F;Debian&#x2F;</span><br></pre></td></tr></table></figure>
 
 <p>使其可执行并启动</p>
@@ -194,7 +196,8 @@
 <p>使其可执行并启动</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod +x &#x2F;etc&#x2F;initramfs&#x2F;post-update.d&#x2F;zz-update-efistub</span><br><span class="line">&#x2F;etc&#x2F;initramfs&#x2F;post-update.d&#x2F;zz-update-efistub</span><br></pre></td></tr></table></figure>
 
-<h4 id="bind-mount"><a href="#bind-mount" class="headerlink" title="bind mount"></a>bind mount</h4><p>我们也可以使用bind mount的方式将efi文件夹挂载到/boot，直接给出fstab的例子，大多数发行版的esp挂载到/boot/efi，这里也用这个路径做例子。</p>
+<p><em>bind mount</em></p>
+<p>我们也可以使用bind mount的方式将efi文件夹挂载到/boot，直接给出fstab的例子，大多数发行版的esp挂载到/boot/efi，这里也用这个路径做例子。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;boot&#x2F;efi&#x2F;EFI&#x2F;xxx &#x2F;boot none bind 0 0</span><br></pre></td></tr></table></figure>
 
 <p>这样，我们就把vmlinuz挪到了esp，可以创建启动项了。</p>
